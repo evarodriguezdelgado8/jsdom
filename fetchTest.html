@@ -4,7 +4,7 @@
 
     <h1> Llamadas fetch</h1>
 
-    <div id=" resultado"></div>
+    <div id="resultado"></div>
 
 
 
@@ -22,6 +22,17 @@ async function miLlamada() { //Paara utilizar await tiene que ser una llamada as
 
         console.log(element["title"]);
         console.log(element["body"]);
+
+        //recorrerlo y añadir al front con un componente de la boostrap
+        document.getElementById("resultado").innerHTML += `
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">${element["title"]}</h5>
+                <p class="card-text">${element["body"]}</p>     
+            </div>
+        </div>
+        `;
+
     }
     
     //console.log(respuesa);
